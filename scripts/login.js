@@ -13,7 +13,7 @@ function login() {
         getAlert('All inputs are required', 'red');
     } else {
         if (ckeckEmailPass()) {
-            window.location.href = 'home.html';
+            window.location.href = '../pages/home.html';
         } else {
             getAlert('Incorrect email or password', 'red');
         }
