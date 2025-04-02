@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    animation: fadeIn 0.6s ease-in-out;
+    position: relative;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.heading {
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #f9f9f9;
+}
+
+input:focus {
+    border-color: #6e8efb;
+    box-shadow: 0 0 5px rgba(110, 142, 251, 0.3);
+    outline: none;
+    background: white;
+}
+
+.btn-signup {
+    width: 100%;
+    padding: 12px;
+    background: #6e8efb;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-signup:hover {
+    background: #5a7deb;
+    transform: translateY(-2px);
+}
+
+p {
+    margin-top: 15px;
+    color: #777;
+    font-size: 14px;
+}
+
+a {
+    color: #6e8efb;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #a777e3;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .form {
+        width: 90%;
+        padding: 20px;
+    }
+}
