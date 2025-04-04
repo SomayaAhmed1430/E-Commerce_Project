@@ -4,52 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="stylesheet" href="../styles/all.min.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+
     <link rel="stylesheet" href="../styles/signUp.css">
     <title></title>
 </head>
 
 <body>
 
-    <!-- <div class="form">
-        <div class="form-container">
-            <h1 class="heading">Smart Login System</h1>
-            <input class=" " type="text" id="userNameInput" required placeholder="Enter Your Name">
-            <input class=" " type="email" id="emailInput" required placeholder="Enter Your  Email">
-            <input class=" " type="password" id="passwordInput" required placeholder="Enter Your Password">
-            <div class="text-center mb-4 d-none" id="message"></div>
-            <button id="signUpBtn"  class="btn-signup">Sign Up</button>
-            <p class="">Don’t have an account?
-                <a class="" href="login.html">Signin</a>
-            </p>
+   <!-- Header ==css in styles.css -->
+   <header>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../assets/images/Storefront.png" alt="NFT Marketplace Logo" class="logo-img">
+            <h1>Online Store</h1>
         </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#" id="logBtn">Sign Up</a></li>
+            </ul>
+            <div class="hamburger">&#9776;</div>
+        </nav>
+    </div>
+</header>
 
 
-    </div> -->
 
 
-    <div class="form">
+<!-- Main Content -->
+<main class="main">
+    <div class="image-section">
+        <img src="../assets/images/2128.jpg" alt="Sign Up Image" class="image">
+    </div>
+
+    <div class="form-section">
+        <h2>Create Account</h2>
+        <p>Welcome! Enter Your Details And Start Creating, Collecting And Selling NFTs.</p>
+           <div class="form">
         <div class="form-container">
-            <h1 class="heading">Smart Register System</h1>
-            <input type="text" id="userNameInput" required placeholder="Enter Your Name">
-            <input type="email" id="emailInput" required placeholder="Enter Your Email">
-            <input type="password" id="passwordInput" required placeholder="Enter Your Password">
+            <input class="input-field" type="text" id="userNameInput" required placeholder="Enter Your Name">
+            <input class="input-field" type="email" id="emailInput" required placeholder="Enter Your Email">
+            <input class="input-field" type="password" id="passwordInput" required placeholder="Enter Your Password">
             <div class="text-center mb-4 d-none" id="message"></div>
-            <button id="signUpBtn" class="btn-signup">Sign Up</button>
+            <button id="signUpBtn" class="create-account-btn">Sign Up</button>
             <p>Don't have an account?
                 <a href="login.html">Signin</a>
             </p>
         </div>
+    </div> 
     </div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
+</main>
 
 
-    <script src="./js/signUp.js"></script>
-    <script src="./js/main.js"></script>
+   
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-left">
+        <div class="logo">
+            <img src="../assets/images/Storefront.png" alt="Online Store  Logo" class="logo-img">
+            <h3>Online Store</h3>
+        </div>
+        <p>Online Store marketplace UI created with Anima for Figma.
+            Online Store marketplace UI created with Anima for Figma.
+        </p>
+        <div class="social-icons">
+           
+            <span>
+                <i class="fa-brands fa-facebook"></i>
+            </span>
+            <span>
+                <i class="fa-brands fa-twitter"></i>
+            </span>
+            <span>
+                <i class="fa-brands fa-discord"></i>
+            </span>
+            <span>
+                <i class="fa-brands fa-instagram"></i>
+            </span>
+        </div>
+    </div>
+    
+    <div class="footer-middle">
+        <h4>Explore</h4>
+        <a href="#" class="footer-link">Marketplace</a>
+        <a href="#" class="footer-link">Rankings</a>
+        <a href="#" class="footer-link">Connect a wallet</a>
+    </div>
+    <div class="footer-right">
+        <h4>Join Our Weekly Digest</h4>
+        <p>Get exclusive promotions & updates straight to your inbox.</p>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Enter your email here" class="subscribe-input">
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+</footer>
+
+<!-- Copyright -->
+<div class="copyright">
+    <p>Ⓒ NFT Market. Use this template freely.</p>
+</div>
+
+
+    <script src="../scripts/signUp.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>
