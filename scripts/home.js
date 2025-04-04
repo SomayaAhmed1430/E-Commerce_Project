@@ -138,10 +138,27 @@ function addToCart(product) {
     alert(`Product "${product.name}" added to cart!`);
 }
 
-// Toggle wishlist function (placeholder)
+// // Toggle wishlist function (placeholder)
+// function toggleWishlist(productId) {
+//     alert(`Product ${productId} toggled in wishlist!`);
+// }
 function toggleWishlist(productId) {
-    alert(`Product ${productId} toggled in wishlist!`);
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    if (wishlist.includes(productId)) {
+        // Remove if already added
+        wishlist = wishlist.filter(id => id !== productId);
+    } else {
+        // Add if not exists
+        wishlist.push(productId);
+    }
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    alert("Wishlist updated!");
 }
+
+
+
 
 // Fetch products when page loads
 window.onload = function () {
