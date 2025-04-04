@@ -120,8 +120,22 @@ searchInput.addEventListener('input', function (event) {
 });
 
 // Add to cart function (placeholder)
-function addToCart(productId) {
-    alert(`Product ${productId} added to cart!`);
+// function addToCart(productId) {
+//     alert(`Product ${productId} added to cart!`);
+// }
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingItem = cart.find(item => item.id === product.id);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ ...product, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`Product "${product.name}" added to cart!`);
 }
 
 // Toggle wishlist function (placeholder)
