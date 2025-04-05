@@ -5,6 +5,9 @@ header {
     position: sticky;
     top: 0; 
     z-index: 100;
+    border-radius: 20px;
+    
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.5);
 }
 
 .nav-container {
@@ -49,7 +52,7 @@ header {
 }
 
 #logBtn {
-    background-color: #a855f7;
+    background-color: rgb(168, 85, 247);
     color: #fff;
     border: none;
     padding: 10px 20px;

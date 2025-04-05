@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: Poppins;
+    background-color: #2F2F2F; 
+    z-index: -1;
+}
+.sizechart a {
+    color: unset;
+    text-decoration: none;
+}
+.container-detail {
+    width:60%;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+}
+.Title-detail {
+    font-size: xx-large;
+    padding: 20px 0;
+    color: #eee;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.Title-detail::after{
+    content: "";  /* تم تصحيحها */
+    position: absolute;
+    left: 50%; /* لتوسيط الخط تحت النص */
+    width: 200px; /* طول الخط */
+    height: 4px; /* سماكة الخط */
+    background-color: #7511c2; /* لون الخط */
+    transform: translateX(-50%); /* لتوسيط الخط */
+    border-radius: 2px; 
+    
+}
+/* 📌 الحاوية الأساسية للصورة والمحتوى */
+.detail-wrapper {
+    display: flex; /* استخدمنا flexbox */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    gap: 80px;
+    text-align: left;
+    color: #eee;
+    margin-bottom: 20px;
+   
+}
+
+/* 🔹 ضبط الصورة */
+.detail-iamge {
+    flex: 1; /* تأخذ المساحة المتاحة */
+    max-width: 40%;
+    position: relative; /* ضروري لـ ::before */
+}
+
+.detail-iamge img {
+    width: 100%; /* الصورة تملى الحاوية */
+    filter: drop-shadow(10px 10px 40px rgba(121, 3, 160, 0.8));
+   
+}
+
+
+
+
+/* 🔹 ضبط المحتوى */
+.contenet-detail {
+    flex: 1.5; /* تأخذ مساحة أكبر من الصورة */
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+}
+.name-contenet-detail {
+    font-size: xxx-large;
+    padding: 20px 0 0 0;
+    margin: 0 0 10px 0;
+}
+.price {
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 7px;
+    margin-bottom: 10px;
+    color: #858584;
+}
+.description-detail {
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* 🔹 ترتيب الأزرار أسفل النص */
+.buttons-detail {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.buttons-detail button {
+    background-color: #eee;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: large;
+}
+.buttons-detail button:nth-child(2) {
+    background-color: #a855f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    box-shadow: 0 10px 20px #2F2F2F77;
+}
+
+/* 📌 *الشاشات المتوسطة (تابلت)*
+   - تقليل عرض الصورة
+   - ترتيب العناصر على شكل عمودي */
+@media only screen and (max-width: 992px) {
+    .detail-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .detail-iamge {
+        max-width: 70%;
+    }
+}
+
+/* 📌 *الشاشات الصغيرة (موبايل)*
+   - الصورة فوق والمحتوى تحتها */
+@media only screen and (max-width: 768px) {
+    .detail-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .detail-iamge {
+        max-width: 90%;
+    }
+    .buttons-detail {
+        justify-content: center;
+    }
+    .size {
+        justify-content: center;
+        flex-wrap: wrap; /* لضمان عدم خروج الأزرار عن الشاشة */
+    }
+}
+
+
+.size {
+    display: flex;
+    gap: 10px;
+   
+    margin-bottom: 20px;
+}
+
+.size-btn {
+    background-color: #eee;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.size-btn:hover {
+    background-color: #a855f7;
+    transform: scale(1.1);
+}
+
+.size-btn:active {
+    background-color: #a855f7;
+}
+
+.size-btn.selected {
+    background-color: #7511c2;
+    color: white;
+}
+
+
+/* //////////////////////////////// */
+.sizechart{
+    margin-bottom: 10px;
+    text-align: center;
+margin-right: 5pc;
+color: #858584;
+}
+
+.sizechart:hover{
+    color: #7511c2;
+    transition: .8s;
+
+}

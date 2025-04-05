@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopEase - Products</title>
     <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/all.min.css">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
                     <h1>Online Store</h1>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="wishlist.html">Wishlist</a></li>
@@ -26,15 +27,100 @@
                 <div class="hamburger">☰</div>
             </div>
         </nav>
+
     </header>  
+        <!----------------------------------------------------head  -->
+        <section class="head">
+            <div class="leftHead">
+                <div class="headLineh1">
+                    <h1>Discover Our E-Commerce</h1>
+                </div>
+                <div class="paraHead">
+                    <p>
+                        Enjoy a smooth and secure shopping experience with our eCommerce platform. Save your favorite items with the Wishlist and easily
+                         manage your purchases using the Add to Cart feature — all in a clean,
+                          user-friendly design.
+                    </p>
+                </div>
+                <div class="GetStartedAnchor">
+                        <a href="#welcomeMessageAnchor" id="GetStartedAnchor">Get Started</a>
+                </div>
+                <div class="analysis">
+                    <div class="totalSales">
+                        <h3>240K+</h3>
+                        <h3>Total Sale</h3>
+                    </div>
+                    <div class="totalSales">
+                        <h3>5 Million+</h3>
+                        <h3>Worldwide Users
+                        </h3>
+                    </div>
+                    <div class="totalSales">
+                        <h3>750K+</h3>
+                        <h3>Products</h3>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------ slider -->
+            <div class="rightHead">
+                <div class="wrapper">
+                    <input type="radio" name="slide" id="one" checked>
+                    <input type="radio" name="slide" id="two">
+                    <input type="radio" name="slide" id="three">
+                    <input type="radio" name="slide" id="four">
+                    <input type="radio" name="slide" id="five">
+                    <div class="img img-1">
+                        <img src="../assets/images/car-3.jpg">
+                    </div>
+                    <div class="img img-2">
+                        <img src="../assets/images/car-2.jpg">
+                    </div>
+                    <div class="img img-3">
+                        <img src="../assets/images/car-1.jpg">
+                    </div>
+                    <div class="img img-4">
+                        <img src="../assets/images/car-4.jpg">
+                    </div>
+                    <div class="img img-5">
+                        <img src="../assets/images/car-5.jpg">
+                    </div>
+                    <div class="slider">
+                        <label for="one" class="one"></label>
+                        <label for="two" class="two"></label>
+                        <label for="three" class="three"></label>
+                        <label for="four" class="four"></label>
+                        <label for="five" class="five"></label>
+                    </div>
+                </div>
+            </div>
 
-    <div id="welcomeMessage" style="text-align: center; padding: 20px;"></div>
+        </section>
+        <!------------------------------------------open&close card image -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+        <!------------------------------------------------------>
 
-    <div class="feature-product">
-        <div class="container" id="productContainer">
+    </header>
+
+    <div id="welcomeMessage" style="text-align: center; padding: 20px;">
+        <a id="welcomeMessageAnchor"></a>
+    </div>
+    <div class="feature-product" data-user-card-container>
+        <div class="searchDiv">
+            <div>
+                <input id="searchInput" type="search" placeholder="Search here" data-search>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container" id="productContainer" data-user-card-container>
         </div>
     </div>
-
+    
     <script src="../scripts/home.js"></script>
 </body>
 </html>
